@@ -5,7 +5,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-  config.vm.network "private_network", type: "dhcp"
+  config.vm.network :private_network, ip: "192.168.33.34"
   config.vm.define "flowbat" do |flowbat|
     flowbat.vm.box = "ubuntu/trusty64"
     flowbat.vm.provision "ansible" do |ansible|
