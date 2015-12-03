@@ -1,0 +1,9 @@
+- name: setup flowbat stack
+  gather_facts: true
+  hosts: all
+  user: vagrant
+  roles:
+    - ansible-silk
+    - ansible-flowbat
+
+
